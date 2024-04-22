@@ -6,20 +6,20 @@ import { AuthInit } from './routes/auth.js';
 import cors from 'cors'
 
 const app = express();
-app.use(express.json()) // for parsing application/json
-app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 const swaggerOptions = {
     swaggerDefinition: {
         info: {
-            title: 'Your API Documentation',
+            title: 'Social Network',
             version: '1.0.0',
             description: 'API Documentation using Swagger',
         },
         basePath: '/',
     },
-    apis: ['./routes/*.js'], // Path to the API routes folder
+    apis: ['./routes/*.js'],
 };
 
 

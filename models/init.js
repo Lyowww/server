@@ -5,9 +5,6 @@ mongoose
 .connect('mongodb://127.0.0.1:27017/social')
 .then(() => console.log('Connected!'));
 
-
-
-// Define User Schema
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -31,7 +28,6 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-// Create User Model
 export const User = mongoose.model('User', userSchema);
 
 
